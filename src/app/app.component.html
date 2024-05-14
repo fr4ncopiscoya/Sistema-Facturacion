@@ -1,0 +1,7 @@
+<router-outlet *ngIf="login"></router-outlet>
+
+<div *ngIf="!login" id="layout-wrapper">
+  <app-aside></app-aside>
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+</div>
