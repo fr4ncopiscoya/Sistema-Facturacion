@@ -18,5 +18,4 @@ export class HeaderComponent {
     localStorage.removeItem('session-dashboard')
     this.router.navigateByUrl('/login')
   }
-
 }

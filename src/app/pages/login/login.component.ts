@@ -13,7 +13,7 @@ export class LoginComponent {
     private router: Router,
     private appComponent: AppComponent,
   ) {
-    // this.appComponent.login = true;
+    this.appComponent.login = true;
   }
 
   ingresarUsuario() {
