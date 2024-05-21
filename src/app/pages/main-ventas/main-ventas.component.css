@@ -1,0 +1,30 @@
+.disabled-color {
+    background-color: #e1e1e1;
+}
+
+/* Asegúrate de que el modal se centre verticalmente y horizontalmente */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-body {
+    font-size: 1.2em;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-outline-dark {
+    margin-left: 10px;
+}

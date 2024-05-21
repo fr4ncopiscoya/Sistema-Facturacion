@@ -1,1 +1,258 @@
-<p>main-compras works!</p>
+<body>
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>COMPRAS</h1>
+        </div>
+        <!-- End Page Title -->
+
+        <section class="section dashboard">
+            <div class="row">
+
+                <!-- Right side columns -->
+                <div class="col-lg-5">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Datos de Ingreso</h5>
+
+                            <!-- Multi Columns Form -->
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="inputEmail5" class="form-label form-control-sm">Nro. Venta</label>
+                                    <input disabled type="text" class="form-control form-control-sm disabled-color"
+                                        id="inputEmail5">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputEmail5" class="form-label form-control-sm">Fecha Emisión</label>
+                                    <input disabled type="date" class="form-control form-control-sm disabled-color"
+                                        id="inputEmail5">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputEmail5" class="form-label form-control-sm">Tipo Doc.</label>
+                                    <select id="mrf_id" class="form-select" style=" font-size: 12px;">
+                                        <option [value]="0">Seleccionar</option>
+                                        <option>
+
+                                        </option>
+                                    </select>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputEmail5" class="form-label form-control-sm">Nro. Doc</label>
+                                    <input type="text" class="form-control form-control-sm" id="inputEmail5">
+                                </div>
+                                <div class="" style="display: flex; align-items: center; justify-content: center;">
+                                    <div class="col-md-10">
+                                        <label for="inputName5" class="form-label form-control-sm">Nombre / Razón
+                                            Social</label>
+                                        <input type="text" class="form-control form-control-sm" id="inputName5">
+                                    </div>
+                                    <div class="col-md-2"
+                                        style="display: flex; justify-content: center; align-items: center; margin-top: 40px;">
+                                        <button type="button" class="btn btn-primary btn-sm">Buscar</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="" class="form-label form-control-sm">Dirección</label>
+                                    <input type="text" class="form-control form-control-sm" id="">
+                                </div>
+                            </form>
+                            <!-- End Multi Columns Form -->
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Agregar Articulos</h5>
+
+                            <!-- Multi Columns Form -->
+                            <form class="row g-3">
+                                <div class="" style="display: flex; align-items: center; justify-content: center;">
+                                    <div class="col-md-6">
+                                        <label for="inputName5" class="form-label">Código</label>
+                                        <input type="text" class="form-control" id="inputName5">
+                                    </div>
+                                    <div class="col-md-6"
+                                        style="display: flex; justify-content: center; align-items: center; margin-top: 30px;">
+                                        <button type="button" class="btn btn-primary">Buscar</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="inputEmail5" class="form-label">Articulo</label>
+                                    <input type="text" class="form-control" id="inputEmail5">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputPassword5" class="form-label">Cantidad</label>
+                                    <input type="text" class="form-control" id="inputPassword5">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputPassword5" class="form-label">Stock</label>
+                                    <input type="text" class="form-control" id="inputPassword5">
+                                </div>
+                                <div class="">
+                                    <button type="submit" class="btn btn-primary">Agregar</button>
+                                    <!-- <button type="reset" class="btn btn-secondary">Reset</button> -->
+                                </div>
+                            </form><!-- End Multi Columns Form -->
+
+                        </div>
+                    </div>
+
+                </div><!-- End Right side columns -->
+
+                <!-- Left side columns -->
+                <div class="col-lg-7">
+                    <div class="row">
+
+                        <!-- Recent Sales -->
+                        <div class="col-12">
+                            <div class="card recent-sales overflow-auto">
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Detalle Factura<span></span></h5>
+
+                                    <table datatable [dtOptions]="dtOptions" class="row-border hover">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Descripción</th>
+                                                <th>Proveedor</th>
+                                                <th>Precio Venta</th>
+                                                <th>Uni x Caja</th>
+                                                <th>Stock</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="row mt-4" style="display: flex; justify-content: right;">
+                                        <label for="" class="col-sm-2 col-form-label">TOTAL:</label>
+                                        <div class="col-sm-4">
+                                            <input disabled type="text" class="form-control disabled-color" id="">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div><!-- End Recent Sales -->
+
+                    </div>
+                </div><!-- End Left side columns -->
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    <div class="" style="display: flex; justify-content: right;">
+                        <div class="" style="margin: 10px;">
+                            <button type="button" class="btn btn-primary">Totalizar</button>
+                        </div>
+                        <div class="" style="margin: 10px;">
+                            <button type="button" class="btn btn-danger">Salir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main><!-- End #main -->
+
+</body>

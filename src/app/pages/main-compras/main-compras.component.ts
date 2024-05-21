@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AppComponent } from '../../app.component';
+import { Config } from 'datatables.net';
 
 @Component({
   selector: 'app-main-compras',
@@ -9,8 +10,17 @@ import { AppComponent } from '../../app.component';
 export class MainComprasComponent {
 
   constructor(
-    private appComponent : AppComponent
-  ){
+    private appComponent: AppComponent
+  ) {
     this.appComponent.login = false
   }
+  dtOptions: Config = {};
+
+  ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      scrollY: '365px'
+    };
+  }
+
 }
