@@ -15,6 +15,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { DataTablesModule } from 'angular-datatables';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { InputMaskModule } from '@ngneat/input-mask';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     AppRoutingModule,
     DataTablesModule,
     NgbModule,
-    NgSelectModule
+    NgSelectModule,
+    InputMaskModule
   ],
   providers: [
     provideClientHydration()

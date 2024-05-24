@@ -21,7 +21,7 @@ export class MainInventarioComponent implements OnInit {
   ngOnInit(): void {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      scrollY: '550px'
+      scrollY: '288px'
     };
   }
 
