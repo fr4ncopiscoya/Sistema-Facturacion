@@ -8,57 +8,72 @@
 
         <section class="section dashboard">
             <div class="row">
-
                 <!-- Right side columns -->
-                <div class="col-lg-5">
+                <div class="col-lg-12">
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Agregar Articulos</h5>
 
                             <!-- Multi Columns Form -->
                             <form class="row g-3">
                                 <!-- <div class="" style="display: flex; align-items: center; justify-content: center;"> -->
-                                <div class="col-md-12">
-                                    <label for="" class="form-label">Articulo</label>
-                                    <select id="mrf_id" class="form-select">
+                                <div class="col-md-3">
+                                    <label for="" class="form-label col-form-label col-form-label-sm">Tipo
+                                        comprobante</label>
+                                    <select id="" class="form-select form-select-sm">
                                         <option [value]="0">Seleccionar</option>
                                         <option>
 
                                         </option>
                                     </select>
                                 </div>
-                                <!-- <div class="col-md-2"
-                                        style="display: flex; justify-content: center; align-items: center; margin-top: 30px;">
-                                        <button type="button" class="btn btn-primary">Buscar</button>
-                                    </div> -->
-                                <!-- </div> -->
-                                <div class="col-md-6">
-                                    <label for="" class="form-label">Código</label>
-                                    <input disabled type="text" class="form-control disabled-color" id="">
+                                <div class="col-md-3">
+                                    <label for="" class="form-label col-form-label col-form-label-sm">Vendedor</label>
+                                    <input type="text" placeholder="Gianfranco Piscoya Chapoñan"
+                                        class="form-control form-control-sm" id="">
                                 </div>
-                                <!-- <div class="col-md-6">
-                                    <label for="" class="form-label">Unidad</label>
-                                    <input type="text" class="form-control" id="">
-                                </div> -->
-                                <div class="col-md-6">
-                                    <label for="" class="form-label">Cantidad</label>
-                                    <input type="text" class="form-control" id="">
+                                <div class="col-md-3">
+                                    <!-- <label for="" class="form-label col-form-label col-form-label-sm">Nombre / Razon
+                                        Social</label>
+                                    <input type="text" class="form-control form-control-sm" id=""> -->
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="" class="form-label col-form-label col-form-label-sm">Fecha
+                                        Emisión</label>
+                                    <input type="date" class="form-control form-control-sm" id="">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="" class="form-label col-form-label col-form-label-sm">Tipo
+                                        Documento</label>
+                                    <select id="mrf_id" class="form-select form-select-sm">
+                                        <option [value]="0">Seleccionar</option>
+                                        <option>
+
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="" class="form-label col-form-label col-form-label-sm">Número
+                                        Documento</label>
+                                    <input type="text" class="form-control form-control-sm" id="">
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="" class="form-label">Stock</label>
-                                    <input disabled type="text" class="form-control disabled-color" id="">
+                                    <label for="" class="form-label col-form-label col-form-label-sm">Nombre / Razon
+                                        Social</label>
+                                    <input type="text" class="form-control form-control-sm" id="">
                                 </div>
-                                <div class="">
+                                <div class="col-md-12">
+                                    <label for="" class="form-label col-form-label col-form-label-sm">Dirección</label>
+                                    <input type="text" class="form-control form-control-sm" id="">
+                                </div>
+                                <!-- <div class="">
                                     <button type="button" class="btn btn-primary">Agregar</button>
-                                    <!-- <button type="reset" class="btn btn-secondary">Reset</button> -->
-                                </div>
+                                </div> -->
                             </form><!-- End Multi Columns Form -->
 
                         </div>
                     </div>
-                    <div class="card">
-                        <!-- <div class="card-body"> -->
+                    <!-- <div class="card">
                         <div class="" style="display: flex; justify-content: right;">
                             <div class="" style="margin: 10px;">
                                 <button (click)="open(boleta)" type="button"
@@ -69,14 +84,14 @@
                                     class="btn btn-outline-primary">Factura</button>
                             </div>
                         </div>
-                        <!-- </div> -->
-                    </div>
+                    </div> -->
 
 
                 </div><!-- End Right side columns -->
-
+            </div>
+            <div class="row">
                 <!-- Left side columns -->
-                <div class="col-lg-7">
+                <div class="col-lg-12">
                     <div class="row">
 
                         <!-- Recent Sales -->
@@ -84,7 +99,15 @@
                             <div class="card recent-sales overflow-auto">
 
                                 <div class="card-body">
-                                    <h5 class="card-title">Lista Productos<span></span></h5>
+                                    <div class="" style="display: flex; align-items: center;">
+                                        <div class="">
+                                            <h5 class="card-title">Lista Productos<span></span></h5>
+                                        </div>
+                                        <div class="" style="margin-left: 25px;">
+                                            <button type="button" (click)="open(productoAgregar)"
+                                                class="btn btn-primary">Agregar</button>
+                                        </div>
+                                    </div>
 
                                     <table datatable [dtOptions]="dtOptions" class="row-border hover">
                                         <thead>
@@ -222,10 +245,10 @@
 
 </body>
 
-<ng-template #boleta let-modal>
+<ng-template #productoAgregar let-modal>
     <div class="modal-header" style="display: flex; justify-content: space-between;">
         <div class="">
-            <h5 class="card-title">Datos Cliente - Boleta</h5>
+            <h5 class="card-title">Agregar Producto</h5>
         </div>
         <div class="">
             <a (click)="modal.dismiss('Cross click')" style="color: white; font-weight: bold; cursor: pointer;">
@@ -239,24 +262,48 @@
         <!-- <div class="card-body"> -->
 
         <form class="row g-3">
-            <div class="col-md-6">
-                <label for="" class="form-label form-control-sm">Tipo Doc.</label>
-                <select disabled id="mrf_id" class="form-select disabled-color" style=" font-size: 12px;">
-                    <!-- <option [value]="0">Seleccionar</option> -->
+            <div class="mb-2-5 col-sm-2 ">
+                <label for="" class="form-label col-form-label col-form-label-sm">Código Producto</label>
+                <div class="" style="display: flex; align-items: center">
+                    <input id="cnombre" disabled="" oninput="this.value = this.value.toUpperCase()" type="text"
+                        class="form-control form-control-sm" style="background-color: #e1e1e1" />
+                </div>
+            </div>
+            <div class="col-md-10">
+                <label for="" class="form-label col-form-label col-form-label-sm">Descripción</label>
+                <!-- <ng-select style="border: 1px solid #b9b9b9; border-radius: 5px;" class="" placeholder="Seleccionar">
+                </ng-select> -->
+                <select id="" class="form-select form-select-sm">
+                    <option [value]="0">Seleccionar</option>                                                                                                                                                                                                                            
                     <option>
-                        Boleta
+
                     </option>
                 </select>
-
             </div>
-            <div class="col-md-6">
-                <label for="" class="form-label form-control-sm">Nro. Doc</label>
-                <input type="text" class="form-control form-control-sm" id="">
+            <!-- <div class="mb-2-5 col-sm-10 ">
+                <label for="" class="form-label col-form-label-sm">Descripción</label>
+                <div class="" style="display: flex; align-items: center">
+                    <input id="cnombre" disabled="" oninput="this.value = this.value.toUpperCase()" type="text"
+                        class="form-control form-control-sm" style="background-color: #e1e1e1" />
+                    <button type="button" title="Buscar" class="btn btn-primary btn-sm"
+                        style="margin-left: 5px">
+                        <i class="ri-search-line"></i>
+                    </button>
+                </div>
+            </div> -->
+            <div class="mb-2-5 col-sm-4 ">
+                <label for="" class="form-label col-form-label-sm"></label>
+                <div class="" style="display: flex; align-items: center">
+                    <input id="cnombre" disabled="" oninput="this.value = this.value.toUpperCase()" type="text"
+                        class="form-control form-control-sm" style="background-color: #e1e1e1" />
+                    <button type="button" title="Buscar" class="btn btn-primary btn-sm" style="margin-left: 5px">
+                        <i class="ri-search-line"></i>
+                    </button>
+                </div>
             </div>
 
             <div class="col-md-12">
-                <label for="" class="form-label form-control-sm">Nombre / Razón
-                    Social</label>
+                <label for="" class="form-label form-control-sm">Unidad</label>
                 <input type="text" oninput="" class="form-control form-control-sm" id="">
             </div>
 

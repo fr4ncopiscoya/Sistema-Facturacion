@@ -2,6 +2,7 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { AppComponent } from '../../app.component';
 import { Config } from 'datatables.net';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @Component({
   selector: 'app-main-ventas',
@@ -25,7 +26,7 @@ export class MainVentasComponent implements OnInit {
   }
 
   open(content: TemplateRef<any>) {
-    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', backdrop: 'static', keyboard: false }).result.then((result) => {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title', modalDialogClass:'modal-lg', backdrop: 'static', keyboard: false }).result.then((result) => {
       console.log(`Closed with: ${result}`);
     });
   }

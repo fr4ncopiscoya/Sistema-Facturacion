@@ -14,6 +14,7 @@ import { MainComprasComponent } from './pages/main-compras/main-compras.componen
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { DataTablesModule } from 'angular-datatables';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     DataTablesModule,
     NgbModule,
+    NgSelectModule
   ],
   providers: [
     provideClientHydration()
