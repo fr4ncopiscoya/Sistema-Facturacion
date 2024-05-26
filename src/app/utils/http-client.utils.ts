@@ -21,6 +21,20 @@ export class HttpClientUtils {
         return this.httpClient.get(url);
     }
 
+    postQueryJwt(query: string, params: any, jwt: boolean = false): Observable<any> {
+        console.log("jwt");
+        
+        const url = `${this.urlApi}${query}`;
+
+        if (jwt) {
+            const token = localStorage.getItem('token');
+            const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+            return this.httpClient.post(url, params, { headers });
+        } else {
+            return this.httpClient.post(url, params);
+        }
+    }
+
     getQueryIp() {
         const url = `${this.urlApiIp}`;
         return this.httpClient.get(url);

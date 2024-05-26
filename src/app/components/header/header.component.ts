@@ -15,7 +15,7 @@ export class HeaderComponent {
   }
 
   logOut() {
-    localStorage.removeItem('session-dashboard')
+    localStorage.clear()
     this.router.navigateByUrl('/login')
   }
 }

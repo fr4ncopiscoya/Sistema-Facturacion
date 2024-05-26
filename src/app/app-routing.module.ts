@@ -15,13 +15,13 @@ const routes: Routes = [
   { path: 'not-found', component: NotFoundComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   { path: 'clientes', component: MainClientesComponent, canActivate: [AuthGuard] },
   { path: 'ventas', component: MainVentasComponent, canActivate: [AuthGuard] },
   { path: 'compras', component: MainComprasComponent, canActivate: [AuthGuard] },
   { path: 'inventario', component: MainInventarioComponent, canActivate: [AuthGuard] },
 
-  { path: '', pathMatch: 'full', redirectTo: 'not-found' },
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
   { path: '**', pathMatch: 'full', redirectTo: 'not-found' },
 ];
 

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, map, firstValueFrom } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { HttpClientUtils } from '../utils/http-client.utils';
 
 @Injectable({
@@ -7,15 +8,18 @@ import { HttpClientUtils } from '../utils/http-client.utils';
 })
 export class AuthService {
 
-  constructor(
-    private httpClientUtils: HttpClientUtils
-  ) { }
+  constructor(private httpClientUtils: HttpClientUtils) { }
 
-  postGetLoginUser(data: any) {
-    return this.httpClientUtils.postQuery('user/login', data).pipe(
-      map(data => {
-        return data;
-      })
-    );
+  login(data: any): Observable<any> {
+    return this.httpClientUtils
+      .postQueryJwt('auth/login/', data)
+      .pipe(
+        map((data: any) => {
+          console.log("data-service: ", data);
+          // Aquí podrías guardar el token en localStorage si lo deseas
+          localStorage.setItem('token', data.access); // Asume que el token viene en la propiedad 'access'
+          return data;
+        })
+      );
   }
 }

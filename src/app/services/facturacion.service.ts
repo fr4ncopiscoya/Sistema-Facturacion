@@ -11,9 +11,9 @@ export class FacturacionService {
     private HttpClientUtils: HttpClientUtils
   ) { }
 
-  listarAreaOficina(data: any) {
+  listarProductos(data: any) {
     return this.HttpClientUtils
-      .postQuery('sigta/areaoficina/listar', data)
+      .postQuery('dashboard/productos', data)
       .pipe(
         map((data) => {
           return data;

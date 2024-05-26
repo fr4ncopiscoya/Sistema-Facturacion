@@ -16,6 +16,14 @@ import { DataTablesModule } from 'angular-datatables';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { InputMaskModule } from '@ngneat/input-mask';
+import { AuthService } from './services/auth.service';
+import { HttpClientUtils } from './utils/http-client.utils';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'; // Asegúrate de importar FormsModule
+import { HttpClientModule } from '@angular/common/http';
+import { AuthInterceptor } from '../app/interceptors/auth.interceptor';
+import { ToastComponent } from './components/toast/toast.component';
+
 
 
 @NgModule({
@@ -30,18 +38,30 @@ import { InputMaskModule } from '@ngneat/input-mask';
     MainInventarioComponent,
     MainVentasComponent,
     MainComprasComponent,
-    NotFoundComponent
+    ToastComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     DataTablesModule,
     NgbModule,
     NgSelectModule,
-    InputMaskModule
+    InputMaskModule,
+    FormsModule,
   ],
   providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    AuthService,
     provideClientHydration()
+  ],
+  exports: [
+    ToastComponent // Si necesitas usar el componente en otros módulos, también puedes exportarlo
   ],
   bootstrap: [AppComponent]
 })
