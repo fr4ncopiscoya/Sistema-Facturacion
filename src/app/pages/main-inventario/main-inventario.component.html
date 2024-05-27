@@ -23,13 +23,17 @@
                                 </div>
                             </div>
                             <form class="row g-3" style="display: flex; align-items: center;">
-                                <div class="col-sm-6">
+                                <div class="col-sm-5">
                                     <label for=""
                                         class="form-label col-form-label col-form-label-sm">Descripción</label>
+                                    <input type="text" oninput="this.value = this.value.toUpperCase()" class="form-control form-control-sm" id="">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="" class="form-label col-form-label col-form-label-sm">Categoría</label>
                                     <select id="mrf_id" class="form-select form-select-sm">
                                         <option [value]="0">Seleccionar</option>
-                                        <option>
-
+                                        <option *ngFor="let data of dataCategoria" [value]="data.cat_id">
+                                            {{data.cat_nombre}}
                                         </option>
                                     </select>
                                 </div>
@@ -38,18 +42,9 @@
                                     <input type="text" class="form-control form-control-sm" id="">
                                 </div>
                                 <div class="col-md-2">
-                                    <label for="" class="form-label col-form-label col-form-label-sm">Unidad de
-                                        Medida</label>
-                                    <select id="mrf_id" class="form-select form-select-sm">
-                                        <option [value]="0">Seleccionar</option>
-                                        <option>
-
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="col-md-2">
                                     <label for="" class="form-label col-form-label col-form-label-sm">Stock</label>
-                                    <input type="text" class="form-control form-control-sm" id="">
+                                    <input type="text" [(ngModel)]="stock" (keypress)="validarNumero($event)"
+                                        class="form-control form-control-sm" id="">
                                 </div>
                                 <div class="col-md-12">
                                     <button type="button" class="btn btn-primary">Nuevo</button>
@@ -70,7 +65,7 @@
                                     <h5 class="card-title">Lista Productos<span></span></h5>
                                 </div>
                                 <div class="" style="margin-left: 25px;">
-                                    <button type="button" class="btn btn-primary">Agregar Item</button>
+                                    <button type="button" (click)="open(newItem)" class="btn btn-primary">Agregar Item</button>
                                 </div>
                             </div>
                             <div class="row">
@@ -225,8 +220,8 @@
                 <div class="" style="display: flex; align-items: center">
                     <select id="" class="form-select form-select-sm">
                         <option [value]="0">Seleccionar</option>
-                        <option>
-
+                        <option *ngFor="let data of dataProducto" [value]="data.pro_id">
+                            {{data.pro_nombre}}
                         </option>
                     </select>
                     <button type="button" title="Buscar" class="btn btn-primary btn-sm" style="margin-left: 5px">

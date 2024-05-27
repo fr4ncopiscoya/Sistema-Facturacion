@@ -11,9 +11,19 @@ export class FacturacionService {
     private HttpClientUtils: HttpClientUtils
   ) { }
 
-  listarProductos(data: any) {
+  listarCategorias() {
     return this.HttpClientUtils
-      .postQuery('dashboard/productos', data)
+      .getQueryJwt('dashboard/categoria')
+      .pipe(
+        map((data) => {
+          return data;
+        })
+      );
+  }
+
+  listarProductos() {
+    return this.HttpClientUtils
+      .getQueryJwt('dashboard/producto')
       .pipe(
         map((data) => {
           return data;

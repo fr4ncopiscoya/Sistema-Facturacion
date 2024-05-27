@@ -23,7 +23,7 @@ export class HttpClientUtils {
 
     postQueryJwt(query: string, params: any, jwt: boolean = false): Observable<any> {
         console.log("jwt");
-        
+
         const url = `${this.urlApi}${query}`;
 
         if (jwt) {
@@ -32,6 +32,19 @@ export class HttpClientUtils {
             return this.httpClient.post(url, params, { headers });
         } else {
             return this.httpClient.post(url, params);
+        }
+    }
+
+    getQueryJwt(query: string, jwt: boolean = false): Observable<any> {
+        const url = `${this.urlApi}${query}`;
+        console.log("url:",url);
+        
+        if (jwt) {
+            const token = localStorage.getItem('token');
+            const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+            return this.httpClient.get(url, { headers });
+        } else {
+            return this.httpClient.get(url);
         }
     }
 

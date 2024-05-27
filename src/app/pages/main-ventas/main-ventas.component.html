@@ -40,7 +40,7 @@
                                 <div class="col-md-3">
                                     <label for="" class="form-label col-form-label col-form-label-sm">Fecha
                                         Emisión</label>
-                                    <input type="date" class="form-control form-control-sm" id="">
+                                    <input type="date" [(ngModel)]="fechaToday" class="form-control form-control-sm" id="">
                                 </div>
                                 <div class="col-sm-3">
                                     <label for="" class="form-label col-form-label col-form-label-sm">Tipo
@@ -104,7 +104,7 @@
                                             <h5 class="card-title">Lista Productos<span></span></h5>
                                         </div>
                                         <div class="" style="margin-left: 25px;">
-                                            <button type="button" (click)="open(productoAgregar)"
+                                            <button type="button" (click)="open(agregarProducto)"
                                                 class="btn btn-primary">Agregar</button>
                                         </div>
                                     </div>
@@ -225,9 +225,14 @@
                                         <div class="col-sm-6">
                                             <button type="button" class="btn btn-primary">Calcular</button>
                                         </div>
-                                        <label for="" class="col-sm-2 col-form-label">TOTAL:</label>
-                                        <div class="col-sm-4">
-                                            <input disabled type="text" class="form-control disabled-color" id="">
+                                        <label for="" class="col-sm-2 col-form-label" style="display: flex; justify-content: right; padding-right: 0px;">TOTAL:</label>
+                                        <div class="col-sm-4"  style="display: flex; align-items: center; justify-content: space-between;">
+                                            <div class="" style="margin-right: 10px;">
+                                                <input disabled type="text" class="form-control disabled-color" id="">
+                                            </div>
+                                            <div class="">
+                                                <button type="button" class="btn btn-primary">Aceptar</button>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -245,10 +250,10 @@
 
 </body>
 
-<ng-template #productoAgregar let-modal>
+<ng-template #agregarProducto let-modal>
     <div class="modal-header" style="display: flex; justify-content: space-between;">
         <div class="">
-            <h5 class="card-title">Agregar Producto</h5>
+            <h5 class="card-title">Agregar Nuevo Item</h5>
         </div>
         <div class="">
             <a (click)="modal.dismiss('Cross click')" style="color: white; font-weight: bold; cursor: pointer;">
@@ -262,58 +267,23 @@
         <!-- <div class="card-body"> -->
 
         <form class="row g-3">
-            <div class="mb-2-5 col-sm-2 ">
-                <label for="" class="form-label col-form-label col-form-label-sm">Código Producto</label>
-                <div class="" style="display: flex; align-items: center">
-                    <input id="cnombre" disabled="" oninput="this.value = this.value.toUpperCase()" type="text"
-                        class="form-control form-control-sm" style="background-color: #e1e1e1" />
-                </div>
-            </div>
-            <div class="col-md-10">
-                <label for="" class="form-label col-form-label col-form-label-sm">Descripción</label>
-                <!-- <ng-select style="border: 1px solid #b9b9b9; border-radius: 5px;" class="" placeholder="Seleccionar">
-                </ng-select> -->
-                <select id="" class="form-select form-select-sm">
-                    <option [value]="0">Seleccionar</option>                                                                                                                                                                                                                            
-                    <option>
-
-                    </option>
-                </select>
-            </div>
-            <!-- <div class="mb-2-5 col-sm-10 ">
+            <div class="mb-2-5 col-sm-12 ">
                 <label for="" class="form-label col-form-label-sm">Descripción</label>
                 <div class="" style="display: flex; align-items: center">
-                    <input id="cnombre" disabled="" oninput="this.value = this.value.toUpperCase()" type="text"
-                        class="form-control form-control-sm" style="background-color: #e1e1e1" />
-                    <button type="button" title="Buscar" class="btn btn-primary btn-sm"
-                        style="margin-left: 5px">
-                        <i class="ri-search-line"></i>
-                    </button>
-                </div>
-            </div> -->
-            <div class="mb-2-5 col-sm-4 ">
-                <label for="" class="form-label col-form-label-sm"></label>
-                <div class="" style="display: flex; align-items: center">
-                    <input id="cnombre" disabled="" oninput="this.value = this.value.toUpperCase()" type="text"
-                        class="form-control form-control-sm" style="background-color: #e1e1e1" />
+                    <select id="" class="form-select form-select-sm">
+                        <option [value]="0">Seleccionar</option>
+                        <option *ngFor="let data of dataProducto" [value]="data.pro_id">
+                            {{data.pro_nombre}}
+                        </option>
+                    </select>
                     <button type="button" title="Buscar" class="btn btn-primary btn-sm" style="margin-left: 5px">
                         <i class="ri-search-line"></i>
                     </button>
                 </div>
             </div>
 
-            <div class="col-md-12">
-                <label for="" class="form-label form-control-sm">Unidad</label>
-                <input type="text" oninput="" class="form-control form-control-sm" id="">
-            </div>
-
-            <div class="col-md-12">
-                <label for="" class="form-label form-control-sm">Dirección</label>
-                <input type="text" class="form-control form-control-sm" id="">
-            </div>
-
             <div class="col-sm-12" style="display: flex; justify-content: right;">
-                <button type="button" class="btn btn-primary">Registrar</button>
+                <button type="button" class="btn btn-primary">Agregar</button>
             </div>
         </form>
         <!-- </div> -->
