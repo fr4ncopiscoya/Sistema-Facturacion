@@ -237,7 +237,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Ventas Recientes <span>| Hoy</span></h5>
 
-                                    <table class="table table-borderless datatable">
+                                    <!-- <table class="table table-borderless datatable">
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
@@ -286,6 +286,117 @@
                                                 <td><span class="badge bg-success">Approved</span></td>
                                             </tr>
                                         </tbody>
+                                    </table> -->
+
+                                    <table datatable [dtOptions]="dtOptions" class="row-border hover" style="width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Cliente</th>
+                                                <th>Producto</th>
+                                                <th>Precio</th>
+                                                <th>Estado</th>
+                                                <th>Stock</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                        </tbody>
                                     </table>
 
                                 </div>
@@ -314,7 +425,7 @@
                                 <div class="card-body pb-0">
                                     <h5 class="card-title">Más vendidos <span>| Hoy</span></h5>
 
-                                    <table class="table table-borderless">
+                                    <!-- <table class="table table-borderless">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Imagen</th>
@@ -376,6 +487,117 @@
                                                 <td>$3,239</td>
                                             </tr>
                                         </tbody>
+                                    </table> -->
+
+                                    <table datatable [dtOptions]="dtOptionsVendidos" class="row-border hover" style="width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Producto</th>
+                                                <th>Precio</th>
+                                                <th>Vendido</th>
+                                                <th>Ganancia</th>
+                                                <th>Stock</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Foo</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                                <td>Bar</td>
+                                            </tr>
+                                        </tbody>
                                     </table>
 
                                 </div>
@@ -394,20 +616,4 @@
         </section>
 
     </main><!-- End #main -->
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-        <div class="copyright">
-            &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-    </footer><!-- End Footer -->
-
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
 </body>
